@@ -1,0 +1,401 @@
+
+:root{
+  --primary: rgb(250, 250, 250);
+  --secondary: rgb(30, 30, 30);
+  --tertiary: rgb(241, 241, 241);
+  --yellow: rgb(246, 202, 69);
+  --yellow_transparent: rgba(246, 202, 69, 0.715);
+  --accent: rgb(31, 154, 216);
+  --accent_red: rgb(229, 79, 78);
+  
+}
+body {
+  font-family: Inter, sans-serif;
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+h2 {
+  color: black;
+  font-size: 300%;
+}
+h3 {
+  color: var(--accent);
+  font-size: 200%;
+}
+
+.floaterLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  top: 5%;
+  right: 3%;
+}
+.floaterLogo p{
+  font-size: 20%;
+  width: 60%;
+}
+.floaterLogo img{
+  height: 10vh;
+}
+.floaterLogo button{
+  padding: 1vw 1vh;
+  font-size: 30%;
+  border-radius: 5px;
+  background-color: var(--yellow_transparent);
+  cursor: pointer;
+  border: 1px solid var(--secondary);
+}
+.floaterLogo button:hover{
+  /*padding: 11px 11px;*/
+  background-color: var(--accent);
+  color: var(--primary);
+  box-shadow: inset 0px 0px 5px blue;
+}
+.floaterLogo button:active{
+  /*padding: 11px 11px;*/
+  background-color: var(--yellow);
+  color: var(--primary);
+  box-shadow: inset 0px 0px 5px blue;
+}
+
+#progressBar{
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 10vw;
+  background-color: none;
+  border-radius: 20px;
+}
+#progressBar img{
+  width: 70%;
+}
+#floaterScroll{
+  position: fixed;
+  bottom: 2vw;
+  left: 48%;
+  width: 6vw;
+  height: 4vw;
+  background-color: var(--yellow_transparent);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#floaterScroll img{
+  width: 100%;
+  margin-left:-5%;
+  margin-top: -5%;
+}
+.title{
+  margin-top: 30vh;
+  scroll-snap-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1{
+  /*color: rgb(246, 202, 69);*/
+  font-size: 500%;
+  color: var(--accent);
+}
+.title p{
+  color: rgb(134, 134, 134);
+  font-size: 200%;
+}
+section{
+  scroll-snap-align: center;
+  margin-top: 50vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 50vh;
+  padding: 2vw 2vw;
+  border-radius: 8px;
+  background-color: var(--tertiary);
+  text-align: center;
+}
+section p{
+  color: rgb(34, 34, 34);
+  font-size: 100%;
+  background-color: rgb(254, 254, 254);
+  border-radius: 8px;
+  padding: 8px 8px;
+}
+
+section input, section select, section textarea {
+  width: 80%;
+  font-size: 150%;
+  color: rgb(0, 0, 0);
+  padding: .375rem .75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+form{
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+form#additional{
+  align-self: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+form#additional button{
+  font-size: 50%;
+}
+
+
+.submitButton{
+  scroll-snap-align: center;
+  margin-top: 0vh;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  margin-bottom: 50vh;
+  border-radius: 5px;
+  padding: 2%;
+  width: 20vw;
+  font-size: 200%;
+  background-color: var(--accent);
+  color: whitesmoke;
+  border: 2px solid;
+  cursor: pointer;
+}
+.submitButton:hover{
+  background-color: var(--yellow);
+  box-shadow: 0px 0px 10px var(--yellow);
+  color: var(--secondary);
+}
+footer {
+  display: none;
+  /*scroll-snap-align: center;*/
+  height: 30vh;
+  background-color: rgb(156, 156, 156);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+footer a {
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bold;
+}
+footer > *:hover{
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  cursor: pointer;
+}
+/* @media screen and (orientation:portrait) {
+  /* section{
+    margin-right: 10%;
+    margin-left: 10%;
+  } 
+} */
+
+/* #outputSection {
+  display: none;
+  background-color: rgb(246, 202, 69);
+}
+#outputSection p{
+  background-color: azure;
+  border-radius: 5px;
+  padding: 20px 20px;
+}
+#outputSection input{
+  background-color: azure;
+  border-radius: 5px;
+  padding: 20px 20px;
+} */
+
+#thesisSection{
+  display: none;
+}
+#thesisSection h3{
+  color: var(--accent);
+}
+#thesisSection button{
+  display: none;
+}
+
+#pointsSection{
+  display: none;
+}
+#pointsSection h3{
+  color: var(--accent);
+}
+#pointsSection button{
+  display: none;
+}
+
+#outlineSection{
+  display: none;
+}
+#outlineSection h3{
+  color: var(--accent);
+}
+#outlineSection button{
+  display: none;
+}
+
+#thesisText{
+  display: none;
+  text-align: center;
+}
+#outlineText{
+  display: none;
+  text-align: left;
+}
+#pointsText{
+  display: none;
+  text-align: left;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+
+  list-style-type: none;
+  width: 20%;
+  margin-left: 40%;
+  padding: 0;
+
+  border: 1px solid grey;
+}
+
+.menu > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.menu > li:hover {
+  background-color: lightgray;
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.dropdown-select-button{
+  width: 100%;
+  height: 100%;
+  margin-left: 40%;
+  text-align: left;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.noneButton{
+  width: 10%;
+  height: 10%;
+  background: var(--primary);
+  color: inherit;
+  border: 1px solid var(--secondary);
+  border-radius: 4px 4px;
+  padding: 5px;
+  font: inherit;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.stepLabel{
+  color: var(--accent);
+  background-color: inherit;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+@media screen and (orientation:portrait) {
+  :root{
+    margin-right: 5vw;
+    margin-left: 5vw;
+    font-size: 2vw;
+    
+  }
+  body{
+    overflow-x: hidden;
+    max-width: 100%;
+    scroll-snap-type: y mandatory;
+  }
+  section{
+    scroll-snap-align: center;
+  }
+  .floaterLogo{
+    width: 3vh;
+    height: 3vh;
+    font-size: 400%;
+    display: block;
+    margin-top: -5%;
+    margin-right: 3%;
+  }
+  .floaterLogo:hover p{
+    display: block;
+
+  }
+  .floaterLogo p{
+    display: none;
+  }
+  .title{
+    margin-left: -7vw;
+    scroll-snap-align: start;
+  }
+  #floaterScroll{
+    position: fixed;
+    bottom: 4vw;
+    left: 44%;
+    width: 12vw;
+    height: 8vw;
+    background-color: var(--yellow_transparent);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #floaterScroll img{
+    width: 100%;
+    margin-left:-5%;
+    margin-top: -5%;
+  }
+  .submitButton{
+    margin-left: 35vw;
+  }
+}
